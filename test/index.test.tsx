@@ -10,14 +10,13 @@ test('Render a basic component (no options or callback)', () => {
     )
 });
 
-test('Render a component and receive a callback',  (done) => {
+test('Render a component with options and receive a callback',  (done) => {
     const options: CytoscapeOptions = {};
-    const getCyCallback = (cy: Core) => {
+    const cyCallback = (cy: Core) => {
         done()
     }
     renderer.create(
-        <SimpleReactCytoscape options={options} 
-        getCyCallback={getCyCallback}
+        <SimpleReactCytoscape options={options}         cyCallback={cyCallback}
         />
     )
 });
