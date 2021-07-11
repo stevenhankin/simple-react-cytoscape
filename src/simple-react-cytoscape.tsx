@@ -1,5 +1,5 @@
-import React, { useEffect, useMemo, useState } from "react";
-import cytoscape, { CytoscapeOptions } from "cytoscape";
+import React, { useEffect, useMemo, useState } from 'react';
+import cytoscape, { CytoscapeOptions } from 'cytoscape';
 
 interface SRCProps {
   options?: CytoscapeOptions;
@@ -10,7 +10,8 @@ interface SRCProps {
 const nextId = (() => {
   let id = 0;
   return () => {
-    return `${id++}`;
+    id += 1;
+    return `simple-react-cytoscape-${id}`;
   };
 })();
 
@@ -23,11 +24,13 @@ export const SimpleReactCytoscape: React.FC<SRCProps> = ({
 
   useEffect(() => {
     if (!cy) {
-      // Determine if running Headless (the unit test are headless)
-      const container =
-        typeof window === "undefined" || typeof process === "object"
-          ? undefined
-          : document.getElementById(id);
+      let container: HTMLElement | null | undefined;
+      try {
+        container = document.getElementById(id);
+      } catch (e) {
+        // Might be running Headless (the unit test are headless)
+        container = undefined;
+      }
       const newCy = cytoscape({
         ...options,
         container,
