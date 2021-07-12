@@ -1,5 +1,8 @@
-# simple-react-cytoscape
-A lightweight React Component wrapper for Cytoscape to simplify integration
+# simple-react-cytoscape  
+![](https://img.shields.io/badge/license-MIT-blue.svg)
+![](https://img.shields.io/npm/v/simple-react-cytoscape) 
+
+Lightweight zero-dependency React Component wrapper for Cytoscape to simplify integration
 
 
 ![](https://media.giphy.com/media/u6YvibOl5Ewn0LJE4h/giphy.gif)

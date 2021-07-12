@@ -30,7 +30,7 @@ export const SimpleReactCytoscape: React.FC<SRCProps> = ({
     if (!cy) {
       let container: HTMLElement | null | undefined;
       try {
-        container = document.getElementById(id);
+        container = document.getElementById(id) || undefined;
       } catch (e) {
         // Might be running Headless (the unit test are headless)
         container = undefined;

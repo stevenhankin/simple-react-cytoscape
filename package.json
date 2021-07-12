@@ -1,10 +1,14 @@
 {
   "name": "simple-react-cytoscape",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple container for Cytoscape in React Apps",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "keywords": ["cytoscape","cytoscapejs","react"],
+  "keywords": [
+    "cytoscape",
+    "cytoscapejs",
+    "react"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/stevenhankin/simple-react-cytoscape.git"
@@ -52,6 +56,7 @@
     "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2",
     "rollup": "^2.53.1",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-jest": "^27.0.3",
     "typescript": "^4.3.5"
