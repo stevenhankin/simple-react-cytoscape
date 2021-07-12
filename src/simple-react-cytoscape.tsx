@@ -1,12 +1,16 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import cytoscape, { CytoscapeOptions } from 'cytoscape';
 
-interface SRCProps {
+export interface SRCProps {
   options?: CytoscapeOptions;
   // Callback will return the cytoscape instance once available
   cyCallback?: (cy: cytoscape.Core) => void;
 }
 
+/**
+ * Generate unique IDs for each
+ * cytoscape container in the app
+ */
 const nextId = (() => {
   let id = 0;
   return () => {
@@ -43,7 +47,7 @@ export const SimpleReactCytoscape: React.FC<SRCProps> = ({
     }
   }, [cy, getCy, id, options]);
 
-  return <div id={id} className="react-simple-cytoscape" />;
+  return <div id={id} className="simple-react-cytoscape" />;
 };
 
 export default SimpleReactCytoscape;
