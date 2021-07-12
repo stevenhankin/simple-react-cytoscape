@@ -2,6 +2,8 @@
 A lightweight React Component wrapper for Cytoscape to simplify integration
 
 
+![](https://media.giphy.com/media/u6YvibOl5Ewn0LJE4h/giphy.gif)
+
 ---
 
 ## Installation
